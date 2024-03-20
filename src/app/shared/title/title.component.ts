@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-title',
+  selector: 'shared-title',
   standalone: true,
   imports: [],
-  templateUrl: './title.component.html',
-  styleUrl: './title.component.css'
+  template: `
+    <h2 class="text-3xl mb-5">
+      {{ title }}
+    </h2>
+  `,
+  styles: ''
 })
 export class TitleComponent {
+
+  //recibir el title
+  @Input({ required: true }) title!: string;
 
 }

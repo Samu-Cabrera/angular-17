@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './user.component.css'
 })
 export default class UserComponent {
+  
 
 }

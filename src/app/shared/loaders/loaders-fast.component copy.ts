@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <h1>Loaders fast</h1>
+    <h3>Loaders fast</h3>
+    <ng-content></ng-content>
   `,
 })
 export class LoadersFastComponent {

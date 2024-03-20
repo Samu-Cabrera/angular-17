@@ -1,1 +1,20 @@
-<p>users works!</p>
+<shared-title title="Servicios con señales"/>
+<hr>
+
+<section class="mt-5">
+    <ul class="flex gap-3">
+        @for (user of userService.users(); track user.id) {
+            <div>
+                <img [srcset]="user.avatar" [alt]="user.name" class="rounded-md shadow-md">
+    
+                <strong>
+                    {{ user.first_name }}
+                </strong>
+            </div>
+        } @empty {
+            <h3>
+                Espere por favor
+            </h3>
+        }
+    </ul>
+</section>

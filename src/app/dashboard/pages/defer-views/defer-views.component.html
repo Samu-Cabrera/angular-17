@@ -1,1 +1,23 @@
-<p>defer-views works!</p>
+<shared-title title="Defer views"/>
+
+<div class="grid grid-cols-1">
+
+    @defer () {
+        <!-- cargar nuestros componentes -->
+    } @placeholder {
+        <!-- mensaje para mostrar durante la carga -->
+    }
+
+    @defer (on idle) {
+        <!-- cargar nuestros componentes -->
+    } @placeholder {
+        <!-- mensaje para mostrar durante la carga -->
+    }
+
+    @defer () {
+        <!-- argar nuestros componentes -->
+    } @placeholder {
+        <!-- mensaje para mostrar durante la carga -->
+    }
+
+</div>

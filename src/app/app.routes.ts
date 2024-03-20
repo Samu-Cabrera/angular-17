@@ -18,7 +18,12 @@ export const routes: Routes = [
             {
                 path: 'defer-option',
                 loadComponent: () => import('./dashboard/pages/defer-option/defer-option.component'),
-                title: 'Defer Option Detection'
+                title: 'Defer Option'
+            },
+            {
+                path: 'defer-views',
+                loadChildren: () => import('./dashboard/pages/defer-views/defer-views.component'),
+                title: 'Defer Views'
             },
             {
                 path: 'user/:id',

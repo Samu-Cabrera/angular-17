@@ -1,1 +1,63 @@
-<p>defer-option works!</p>
+<shared-title title="Defer options"/>
+<div class="grid grid-cols-3 gap-2">
+    <section>
+        <h2 class="text-xl">Interacciones</h2>
+        <hr>
+        <button 
+            #interaction
+            class="px-10 py4 text-white rounded-md bg-blue-950 shadow-md m-2">
+            Click me
+        </button>
+    
+        <div class="w-52 h-20 bg-blue-400 text-center text-white pt-3 rounded-md">
+    
+    
+    
+            @defer (on interaction(interaction)) {
+                <loaders-fast>
+                    <span>On interaction</span>
+                </loaders-fast>
+            } @placeholder {
+                <span>
+                    click en el div
+                </span>
+            }
+        </div>
+    
+    </section>
+    <section>
+        <h2 class="text-xl">Hover</h2>
+        <hr>
+        <div class="w-52 h-20 bg-green-400 text-center text-white pt-3 rounded-md">
+    
+            @defer (on hover) {
+                <loaders-fast>
+                    <span>On Hover</span>
+                </loaders-fast>
+            } @placeholder {
+                <span>
+                    efecto hover
+                </span>
+            }
+        </div>
+    
+    </section>
+
+    <section>
+        <h2 class="text-xl">Carga diferida multiple</h2>
+        <hr>
+        <div class="w-52 h-20 bg-green-400 text-center text-white pt-3 rounded-md">
+    
+            @defer (on hover; prefetch on idle) {
+                <loaders-fast>
+                    <span>On Multiple</span>
+                </loaders-fast>
+            } @placeholder {
+                <span>
+                    
+                </span>
+            }
+        </div>
+    
+    </section>
+</div>
