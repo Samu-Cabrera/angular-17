@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, computed, inject, signal } from '@angular/core';
-import { delay } from 'rxjs';
+import { delay, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +32,14 @@ export class UserService {
         users: res.data
       })
     })
+  }
+
+  getUserById(id: string){
+    return this.http.get<any>(`${ this.apiUrl }/${ id }`)
+    .pipe(
+      delay(1000),
+      map(res => res.data)
+    )
   }
 
 }
